@@ -1,0 +1,93 @@
+body {
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    margin:40px auto;
+    padding: 24px;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    display: none;
+
+}
+h1 {
+    text-align: center;
+    margin: 0 0 18px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 18px;
+
+    .first {grid-column: 1; grid-row: 1;}
+    .last  {grid-column: 2; grid-row: 1;}
+    .email {grid-column: 3; grid-row: 1;}
+
+    .title {grid-column: 1; grid-row: 2;}
+    .company {grid-column: 2; grid-row: 2;}
+    .Linkedin {grid-column: 3; grid-row: 2;}
+
+
+    
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap:6px;
+
+}
+.field input, 
+.field select,
+.field textarea {
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-size: 14px;
+    
+}
+
+.half-row {grid-column: 1/ -1;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 18px;
+}
+
+.span-3 {grid-column: 1/ -1;}
+
+.bottom{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+
+justify-content: space-between;
+gap: 16px;
+flex-wrap: warp;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#submit-buttom{
+    padding: 8px 14px;
+    border: 1px solid black;
+    background: green;
+    color: aliceblue;
+    border-radius: 15px;
+    cursor: pointer;
+}

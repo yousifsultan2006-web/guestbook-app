@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="form.js" defer></script>
+    <link rel="icon" type = "image/png" href = "/faviconY.png">
+</head>
+<body>
+    <!--Form-->
+    <form id = "contactForm" action="submit_form" method="POST">
+        <h1>Contact Form</h1>
+        <!--Fieldset for contact form-->
+        <fieldset>
+            <legend>Contact Information</legend>
+          <div class = "grid">
+            <div class = "field first">
+            <label for="fname">First Name:</label>
+            <span id ="fname-error" class = "error"></span>
+            <input type="text" id="fname" name="fname" required>
+            </div>
+
+            <div class = "field last">
+            <label for ="lname"> Last Name:</label>
+            <span id = "lname-error" class = "error"></span>
+            <input type = "text" id = "lname" name = "lname" required>
+            </div>
+            <div class = "field email">
+            <label for = "email"> Email address:</label>
+            <span id = "email-error" class = "error"></span>
+            <input type = "email" id = "email" name = "email" required>
+            </div>
+
+            <div class = "field title">
+            
+            <label for = "jobtitle"> Job Title:</label>
+            <span id = "jobtitle-error" class = "error">answer required</span>
+            <input type = "text" id = "jobtitle" name = "jobtitle" required>
+
+            </div>
+
+            <div class = "field company">
+            <label for = "Company"> Company:</label>
+            <span id = "Company-error" class = "error"></span>
+            <input type = "text" id = "Company" name = "Company" required>
+            </div>
+            <div class = "field Linkedin">
+            <label for = "LinkedIn"> LinkedIn URL:</label>
+            <span id = "LinkedIn-error" class = "error"></span>
+            <input type = "url" id = LinkedIn name = "LinkedIn" required>
+            </div>
+            <div class = "half-row">
+            <div class = "field">
+            <label for = "methodofmeeting"> How did we meet?</label>
+            <span id = "methodofmeeting-error" class = "error">Choice Required</span>
+            <select id = "methodofmeeting" name = "methodofmeeting" required>
+                <option value = "" disabled selected> please select an option </option>
+                <option value = "conference"> Conference </option>
+                <option value = "socialmedia"> Social Media </option>
+            </select>
+            </div>
+
+            <div class = "field">
+            <label for = "other"> Other (please specify)</label>
+            <span id = "other-error" class = "error">Answer Required</span>
+            <input type = "text" id = "other" name = "other">
+            </div>
+            </div>
+
+            <div class = "field span-3">
+
+            <label for = "message">Message</label>
+
+            <textarea id = "message" name ="message"></textarea>
+          </div>
+         </div>
+
+         <!--bottom row uses flex-->
+         <div class ="bottom">
+            <label for = "mailing-list-checkmark">Please add me to your mailing list</label>
+            <input type = "checkbox" id ="mailing-list-checkmark" name = "mailing-list-checkmark">
+
+            <div class = "radio">
+                <fieldset class = "radio">
+                    <legend>Choose an email format:</legend>
+            <span id = "email-format-error" class = "error">format choice required</span>
+
+            <label for="format-html">
+            <input type = "radio" id = "format-html" name = "format">HTML</label>
+
+            <label for = "format-text"><input type = "radio" id = "format-text" name = "format">Text</label>
+            </fieldset>
+            </div>
+          
+            <button type = "submit" id = "submit-buttom">Submit</button>
+         </div>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
