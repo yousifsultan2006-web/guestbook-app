@@ -6,12 +6,12 @@
     
     <title>Contact Form</title>
     <link rel="stylesheet" href="/styles/styles.css">
-    <script src="form.js" defer></script>
+    <script src="/js/form.js" defer></script>
     <link rel="icon" type = "image/png" href = "/faviconY.png">
 </head>
 <body>
     <!--Form-->
-    <form id = "contactForm" action="submit_form" method="POST">
+    <form id = "contactForm" action = "submit_form" method = "POST">
         <h1>Contact Form</h1>
         <!--Fieldset for contact form-->
         <fieldset>
@@ -19,44 +19,44 @@
           <div class = "grid">
             <div class = "field first">
             <label for="fname">First Name:</label>
-            <span id ="fname-error" class = "error"></span>
-            <input type="text" id="fname" name="fname" required>
+            <span id ="fname-error" class = "error">first name is required</span>
+            <input type="text" id="fname" name="fname">
             </div>
 
             <div class = "field last">
             <label for ="lname"> Last Name:</label>
-            <span id = "lname-error" class = "error"></span>
-            <input type = "text" id = "lname" name = "lname" required>
+            <span id = "lname-error" class = "error">last name is required</span>
+            <input type = "text" id = "lname" name = "lname" >
             </div>
             <div class = "field email">
             <label for = "email"> Email address:</label>
             <span id = "email-error" class = "error"></span>
-            <input type = "email" id = "email" name = "email" required>
+            <input type = "text" id = "email" name = "email" >
             </div>
 
             <div class = "field title">
             
             <label for = "jobtitle"> Job Title:</label>
             <span id = "jobtitle-error" class = "error">answer required</span>
-            <input type = "text" id = "jobtitle" name = "jobtitle" required>
+            <input type = "text" id = "jobtitle" name = "jobtitle" >
 
             </div>
 
             <div class = "field company">
             <label for = "Company"> Company:</label>
             <span id = "Company-error" class = "error"></span>
-            <input type = "text" id = "Company" name = "Company" required>
+            <input type = "text" id = "Company" name = "Company" >
             </div>
             <div class = "field Linkedin">
             <label for = "LinkedIn"> LinkedIn URL:</label>
             <span id = "LinkedIn-error" class = "error"></span>
-            <input type = "url" id = LinkedIn name = "LinkedIn" required>
+            <input type = "text" id = "LinkedIn" name = "LinkedIn" >
             </div>
             <div class = "half-row">
             <div class = "field">
             <label for = "methodofmeeting"> How did we meet?</label>
-            <span id = "methodofmeeting-error" class = "error">Choice Required</span>
-            <select id = "methodofmeeting" name = "methodofmeeting" required>
+            <span id = "methodofmeeting-error" class = "error">Choice is Required</span>
+            <select id = "methodofmeeting" name = "methodofmeeting" >
                 <option value = "" disabled selected> please select an option </option>
                 <option value = "conference"> Conference </option>
                 <option value = "socialmedia"> Social Media </option>
