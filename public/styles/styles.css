@@ -20,6 +20,9 @@ h1 {
     text-align: center;
     margin: 0 0 18px;
 }
+footer {
+    text-align: center;
+}
 
 .grid {
     display: grid;
