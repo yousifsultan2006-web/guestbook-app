@@ -3,7 +3,7 @@ import express from 'express';
 const submissions = [];
 const app = express();
 // Set the port number
-const PORT = 3010;
+const PORT = 3011;
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
 app.post("/submit_form", (req, res) => {
