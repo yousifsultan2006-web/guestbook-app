@@ -35,7 +35,7 @@ app.post("/submit_form", (req, res) => {
     
 
 app.get("/admin", (req, res) => {
-    res.render('admin', {orders});
+    res.render('admin', {submissions});
 });
 
 app.get('/', (req, res) => {

@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confirmation page</title>
+    <link rel="stylesheet" href="/public/styles/confirmation.css">
+     
 </head>
 <body>
+    <header>
+        <div class = "nav-bar">
+            <dib class = "nav-field">
+                <a href = "/admin">Admin View</a>
+            </dib>
+            <dib class = "nav-field">
+                <a href = "/">Fill Out Form</a>
+            </dib>
+            
+        </div>
+    </header>
     <h1>form submission succesful!</h1>
     <p class = "submission-details"> Form details below:</p>
     <ul class = "submission-details">
@@ -21,12 +34,14 @@
             <li>MailingChecklist:<%=submittedform.mailingchecklist%></li></li>
             <li>Format Choice(HTML):<%=submittedform["format-html"]%></li></li>
             <li>Format Choice(TEXT):<%=submittedform["format-text"]%></li></li>
+            <li>TimeStamp: <%=submittedform.timestamp%></li>
             
     </ul>
     <a href = "/">back to form</a>
     <br>
     <a href = "/admin">Admin route view</a>
    
+    
     
 </body>
 </html>
