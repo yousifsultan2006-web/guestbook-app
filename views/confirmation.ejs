@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation page</title>
+</head>
+<body>
+    <h1>form submission succesful!</h1>
+    <p class = "submission-details"> Form details below:</p>
+    <ul class = "submission-details">
+            <li>First Name: <%=submittedform.fname%></li>
+            <li>Last Name: <%=submittedform.lname%></li>
+            <li>Email: <%=submittedform.email%></li>
+            <li>Job title:<%=submittedform.jobtitle%></li>
+            <li>Company:<%=submittedform.Company%></li></li>
+            <li>LinkedIn:<%=submittedform.LinkedIn%></li></li>
+            <li>Method of meeting:<%=submittedform.methodofmeeting%></li></li>
+            <li>other specified method:<%=submittedform.other%></li></li>
+            <li>Message:<%=submittedform.message%></li></li>
+            <li>MailingChecklist:<%=submittedform.mailingchecklist%></li></li>
+            <li>Format Choice(HTML):<%=submittedform["format-html"]%></li></li>
+            <li>Format Choice(TEXT):<%=submittedform["format-text"]%></li></li>
+            
+    </ul>
+    <a href = "/">back to form</a>
+    <br>
+    <a href = "/admin">Admin route view</a>
+   
+    
+</body>
+</html>
