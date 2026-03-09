@@ -20,8 +20,8 @@ document.getElementById("contactForm").onsubmit = () => {
     }
     //validate email, ensure an email is given if mailing list is checked
     let email = document.getElementById("email").value.trim();
-    let mailingListChecked = document.getElementById("mailing-list-checkmark").checked
-    if(mailingListChecked && !email) {
+    let mailingchecklist = document.getElementById("mailingchecklist").checked
+    if(mailingchecklist && !email) {
         document.getElementById("email-error").textContent = "Email is required if you join mailing list";
         document.getElementById("email-error").style.display = "block";
         valid = false;
@@ -33,18 +33,18 @@ document.getElementById("contactForm").onsubmit = () => {
         valid = false;
 
     }
-    let linkedin = document.getElementById("LinkedIn").value.trim();
+    let linkedin = document.getElementById("linkedin").value.trim();
 
     if (linkedin && !linkedin.startsWith("https://linkedin.com/in/")) {
-        document.getElementById("LinkedIn-error").textContent = "LinkedIn URL must start with https://linkedin.com/in/";
+        document.getElementById("linkedin-error").textContent = "LinkedIn URL must start with https://linkedin.com/in/";
 
-        document.getElementById("LinkedIn-error").style.display = "block";
+        document.getElementById("linkedin-error").style.display = "block";
         valid = false;
     }
     //validate how we met
-    let methodofmeeting = document.getElementById("methodofmeeting").value.trim();
-    if (!methodofmeeting) {
-        document.getElementById("methodofmeeting-error").style.display = "block";
+    let method = document.getElementById("method").value.trim();
+    if (!method) {
+        document.getElementById("method-error").style.display = "block";
         valid = false;
     }
     return valid;
