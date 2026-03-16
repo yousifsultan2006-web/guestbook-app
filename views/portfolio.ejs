@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel = "stylesheet" href = "/styles/portfolio.css">
+    <link rel = "stylesheet" href = "/styles/styles.css">
+
+</head>
+<body>
+    <%- include("navbar")%>
+    <div class = "portfolio-container">
+        <header class = "portfolio-header">
+            <h1>Portfolio: Projects Overview</h1>
+        </header>
+        <section class = "projects-grid"></section>
+
+        <div class = "project-card">
+            <h2>Game Deal Finder</h2>
+            <p>Me and my partners used Node.js to allow running on the server, allowing our website to handle requests from useres, communicate with the database, verifying input, and sending responses back to the browser. 
+                We also used Express to handle server routing and logic. allowing us to handle form submissions and creating routes like "/index". We used also used EJS to allow use of JS in our html page, allowing us to access the database irectly from the html page.
+                We then used MySQL workbenck to create our database to store and use data from.
+            </p>
+            <p>
+                We all played key roles in all fields of the project. I structured the navigation bar as a partial and designed it with the css.
+                I also contributed to the html submit-deal form, building it and desigining it with css. 
+                I built the logic behind the filter bar, How it grabs entry and structures SQL lines to update the data pulled from the database.
+                I contribute to the CSS design of all pages. 
+            </p>
+            <h3><a href="https://github.com/akurfurst/CodeRelic-GameDealFinder">Github Repository</a></h3>
+            <img src = "/images/Game-Deal-Finder.png" alt = "game-deal-finder sample photo">
+            
+        </div>
+        <div class = "project-card">
+            <h2>Grab the Moon!</h2>
+            <p>Grab the moon is a game made to run on the Game Boy Advanced, built with CPP using mainly Butano. The game is designed to play be one of many mini games inside a class size project game called MicroJam. </p>
+            <p>Me and my partner worked on the game, creating header files for declarations and cpp files for initialization. We created sprites, designed backgrounds, built bounding logic and slowly built and refined the game. 
+                The technology used includes Docker, MGBA, physical game boy advanced for testing, and Libresprite for sprite design.
+            </p>
+            <h3><a href = "https://github.com/tonymythical/microjam">Git Repository</a></h3>
+
+            <img src = "/images/Grab-The-Moon.png" alt = "Grab The Moon game sample photo">
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
