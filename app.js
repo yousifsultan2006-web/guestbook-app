@@ -2,6 +2,7 @@
 import express from 'express';
 import mysql2 from 'mysql2';
 import dotenv from 'dotenv';
+import {validateForm} from './validation.js';
 
 dotenv.config();
 const submissions = [];
@@ -36,6 +37,10 @@ app.post("/submit_form", async(req, res) => {
     
     try {
         const form = req.body;
+        const Valid = validateForm(form);
+        if (!Valid.isValid){
+            return res.render("index", {errors : Valid.errors,});
+        }
         console.log('New form submitted:', form);
         const sql = `
         INSERT INTO submissions 
@@ -100,9 +105,10 @@ app.get("/admin",async(req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.render('index');
-
+    res.render('index', {errors : [] });
 });
+
+
 
 app.get('/portfolio', (req, res) => {
     res.render('portfolio')

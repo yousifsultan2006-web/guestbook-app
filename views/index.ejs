@@ -11,8 +11,19 @@
 </head>
 <body>
    <%- include('navbar')%>
-    <!--Form-->
+    <% if (errors && errors.length > 0) { %>
+          <div class = "error-box">
+            <ul>
+                <% errors.forEach(error => { %>
+                    <li> <%= error %></li>
+                    <% }) %>
+                </ul>
+            </div>  
+            <% } %>
+            <!--Form-->
     <form id = "contactForm" action = "submit_form" method = "POST">
+        
+        
         <h1>Contact Form</h1>
         <!--Fieldset for contact form-->
         <fieldset>
